@@ -128,7 +128,7 @@ div.Dark_Btn_Logo{
 }
 @media screen and (max-width:500px) {
   .Music_Name-Ex{
-    color: #fff;
+    background-color: #fff;
   }
 }
 h1.Name_Log{
@@ -141,6 +141,12 @@ h1.Name_Log{
   h1.Name_Log{
     font-size: 35px;
     line-height: 40px;
+  }
+}
+@media screen and (max-width:800px) {
+  h1.Name_Log{
+    font-size: 30px;
+    line-height: 35px;
   }
 }
 @media screen and (max-width:513px) {
