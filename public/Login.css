@@ -126,7 +126,11 @@ div.Dark_Btn_Logo{
   text-decoration: none;
   text-shadow: 0px 0px 10px #fff;
 }
-
+@media screen and (max-width:500px) {
+  .Music_Name-Ex{
+    color: #fff;
+  }
+}
 h1.Name_Log{
   font-size: 40px;
   line-height: 50px;
