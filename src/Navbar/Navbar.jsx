@@ -64,14 +64,16 @@ const Navbar = () => {
              </div>
           </div>
         </div>
-
-        <div className='Music_Search'>
-        <form action="" class="search-bar">
-            <i id="Searchbar" class="fa fa-search" aria-hidden="true"></i>
-            <input type="search" name="search" pattern=".*\S.*" required />
-        </form>
-        </div>
-
+         
+         <div className='Music_Disable_Search-1'>
+          <div className='Music_Search'>
+            <form action="" class="search-bar">
+                <i id="Searchbar" class="fa fa-search" aria-hidden="true"></i>
+                <input type="search" name="search" pattern=".*\S.*" required autoComplete="off" />
+            </form>
+          </div>
+         </div>
+        
 
         <div className='Music_Explore_menu'>
           <div className='Music_Menu_links'>
@@ -79,6 +81,15 @@ const Navbar = () => {
             <Link  className="Home_name" to="/Home" ><i class="fa fa-home" aria-hidden="true"></i> Home</Link>
             <Link to='/Search' className='Btn_Search'> <i class="fa fa-search" aria-hidden="true"></i> Search</Link>
             </div>
+            <div className='Disable_Search-2'>
+              <div className='Music_Search'>
+                  <form action="" class="search-bar">
+                      <i id="Searchbar" class="fa fa-search" aria-hidden="true"></i>
+                      <input type="search" name="search" pattern=".*\S.*" required  autoComplete="off" />
+                  </form>
+              </div>
+            </div>
+            
             <Link className="Sign_Login  SignUp" to="/Signup">Sign up</Link>
             <Link className="Sign_Login  Login" to="/Login">Login</Link>
             <button onClick={toggleDarkMode} className="BUTNS Button_BTN" title="Change To Dark Mode"></button>

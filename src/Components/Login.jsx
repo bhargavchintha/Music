@@ -46,7 +46,7 @@ const Login = () => {
        <div className='Login_From_Create'>
           <form className='Login_Page' id='loginForm' method='post' action='' >
              <h1 className='Name_Log'>
-              Log in To Music<br></br> Explore
+              Log in To <span className='Music_Name_Ex'> Music Explore</span>
              </h1>
           <div className='Email-User_Field'>
             <div class="input-field">

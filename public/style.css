@@ -33,14 +33,34 @@ body{
 
 nav.Music_Explore {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto; 
     justify-content: space-between;
     position: fixed;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+ }
+  @media screen and (max-width:1200px){
+    nav.Music_Explore{
+      grid-template-columns: auto auto; 
+    }
   }
-  
+  @media screen and (max-width:1200px) {
+    div.Music_Disable_Search-1{
+      display: none;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  div.Disable_Search-2{
+    display: none;
+  }
+  @media screen and (max-width:1200px) {
+    div.Disable_Search-2{
+      display: block;
+      transition: all 0.3s ease-in-out;
+    }
+  }
   div.Music_Explore_logo {
    background-color: var(--F5F5F5);
    width: 180%;
@@ -55,6 +75,8 @@ nav.Music_Explore {
     position: relative;
     display: inline-block;
     transition: 0.3s all ease-in-out;
+    font-family: "Girassol", serif;
+    letter-spacing: 1px;
   }
   
   .Music_Home::after {
@@ -235,8 +257,6 @@ div.Home_Search{
     display: none;
   }
 }
-
-
   
 input[type="search"]{
   width: 20px;
@@ -253,6 +273,17 @@ input[type="search"]{
   border-bottom: 2px solid var(--000);
   color: var(--000);
 }
+@media screen and (max-width:1250px) {
+  input[type="search"]{
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width:1200px) {
+  input[type="search"]{
+    margin-left: -145px;
+    margin-right: 20px;
+  }
+}
 #Searchbar{
   position: absolute;
   font-size: 20px;
@@ -261,6 +292,16 @@ input[type="search"]{
    margin-left: 5px;
    font-size: 20px;
    color: var(--000);
+}
+@media screen and (max-width:1250px) {
+  #Searchbar{
+    margin-left: 55px;
+  }
+}
+@media screen and (max-width:1200px) {
+  #Searchbar{
+    margin-left: -140px;
+  }
 }
 input[type=search]:focus {
   width: 300px;
