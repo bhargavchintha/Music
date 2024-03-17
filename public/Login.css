@@ -391,6 +391,8 @@ p.Link_send{
 @media screen and (max-width:450px) {
   .Link_Sign-Up{
     display: block;
+    margin-top: 2px;
+    text-decoration: underline #ff9700;
   }
 }
 @media screen and (max-width:350px) {

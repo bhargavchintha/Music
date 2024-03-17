@@ -83,7 +83,7 @@ const Login = () => {
               <p className='Hr_Line_Er'>or</p>
            </div>
             <div className='Sign_up-Page'>
-             <p className='Link_send'> Don't have an account? <Link className='Link_Sign-Up' to='/Signup'>Sign up</Link>.</p>
+             <p className='Link_send'> Don't have an account? <Link className='Link_Sign-Up' to='/Signup'>Sign up</Link></p>
             </div>
          </div>
 
