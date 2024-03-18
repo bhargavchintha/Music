@@ -417,11 +417,11 @@ button.BUTNS{
 @media screen and (max-width:940px) {
   .Button_Dark_Mode{
     display: flex;
-    text-align: right;
-    justify-content: right;
+    
+    position: relative;
   }
   #Pos_Btn{
-    position: absolute;
+    position: relative;
   }
 }
 div.Home_Search{
