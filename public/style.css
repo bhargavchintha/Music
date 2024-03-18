@@ -336,6 +336,9 @@ nav.Music_Explore {
 .nav_ico,.nav_I {
   display: none; 
 }
+.hide-bars-link {
+  display: none;
+}
 
 @media screen and (max-width:940px) {
   .nav_ico {
