@@ -1,8 +1,11 @@
 import React, { useEffect ,useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const history = useHistory();
+
   const toggleDarkMode = () => {
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     const element = document.body;
@@ -19,14 +22,6 @@ const Navbar = () => {
     }
   }, []);
 
-  const history = useHistory();
-
-  const handleClick = () => {
-    // Redirect to the login page
-    history.push('/Signup');
-  };
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
   };
@@ -34,7 +29,24 @@ const Navbar = () => {
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
   };
-  
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    // Navigate to Search component with the search query as a URL parameter
+    history.push(`/Search?query=${searchQuery}`);
+    handleCloseMenu();
+  };
+
+  const handleInputChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleClick = () => {
+    // Redirect to the login page
+    history.push('/Signup');
+    handleCloseMenu();
+  };
+
   return (
     <>
       <nav className='Music_Explore'>
@@ -76,10 +88,10 @@ const Navbar = () => {
          
          <div className='Music_Disable_Search-1'>
           <div className='Music_Search'>
-            <form action="" class="search-bar">
-                <i id="Searchbar" class="fa fa-search" aria-hidden="true"></i>
-                <input type="search" name="search" pattern=".*\S.*" required autoComplete="off" onClick={handleClick} />
-            </form>
+                <form action="" class="search-bar" onSubmit={handleSearch} >
+                      <i id="Searchbar" class="fa fa-search" aria-hidden="true"></i>
+                      <input  id="Search_Box-text" type="search" name="search" pattern=".*\S.*" required  autoComplete="off"   value={searchQuery} onChange={handleInputChange} />
+                </form>
           </div>
          </div>
         
@@ -89,9 +101,9 @@ const Navbar = () => {
             
           <div className='Disable_Search-2'>
               <div className='Music_Search'>
-                  <form action="" class="search-bar">
+                  <form action="" class="search-bar" onSubmit={handleSearch} >
                       <i id="Searchbar" class="fa fa-search" aria-hidden="true"></i>
-                      <input type="search" name="search" pattern=".*\S.*" required  autoComplete="off" onClick={handleClick} />
+                      <input id="Search_Box-text" type="search" name="search" pattern=".*\S.*" required  autoComplete="off"   value={searchQuery} onChange={handleInputChange} />
                   </form>
               </div>
             </div>
@@ -111,7 +123,7 @@ const Navbar = () => {
                     </div>
                     <div className='In_Side_Search'>
                       <div className='File_Upload'>
-                          <button className='BTN_Upload' onClick={() => { handleClick(); handleCloseMenu(); }}> <i id="Fa-Upload" class="fa fa-search" aria-hidden="true"></i> &nbsp;Search</button>
+                          <button className='BTN_Upload' onClick={handleCloseMenu}> <i id="Fa-Upload" class="fa fa-search" aria-hidden="true"></i> &nbsp;Search</button>
                       </div>
                     </div>
                     <div className='File_Upload'>

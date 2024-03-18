@@ -439,7 +439,7 @@ div.Home_Search{
   }
 }
   
-input[type="search"]{
+#Search_Box-text{
   width: 20px;
   transition: width 0.4s ease-in-out;
   padding: 10px 15px;
@@ -455,28 +455,28 @@ input[type="search"]{
   color: var(--000);
 }
 @media screen and (max-width:1250px) {
-  input[type="search"]{
+  #Search_Box-text{
     margin-left: 50px;
   }
 }
 @media screen and (max-width:1200px) {
-  input[type="search"]{
+  #Search_Box-text{
     margin-left: -145px;
     margin-right: 20px;
   }
 }
 @media screen and (max-width:1050px){
-  input[type="search"]{
+  #Search_Box-text{
     margin-right: 10px;
   }
 }
 @media screen and (max-width:940px){
-  input[type="search"]{
+  #Search_Box-text{
     margin-right: 30px;
   }
 }
 @media screen and (max-width:640px){
-  input[type="search"]{
+  #Search_Box-text{
     margin-right: 30px;
   }
 }
@@ -509,7 +509,7 @@ div.In_Side_Search{
     margin-left: -140px;
   }
 }
-input[type=search]:focus {
+#Search_Box-text:focus {
   width: 300px;
   border-radius: 10px;
   padding-left: 35px;
@@ -517,7 +517,7 @@ input[type=search]:focus {
   box-shadow: 0 0 5pt 2pt var(--000);
 }
 @media screen and (max-width:600px){
-  input[type=search]:focus{
+  #Search_Box-text:focus{
     width: 250px;
   }
 }
