@@ -25,7 +25,19 @@ div.Login_page{
   background-image: url(Images/Login-img-transformed.png); 
   background-size: cover;
   background-repeat: no-repeat;
+  animation: Top 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
+
+@keyframes Top {
+  0%{
+    height: 0%;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
 div.Login_From{
   width: 80%;
   margin: auto;

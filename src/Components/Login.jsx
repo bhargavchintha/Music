@@ -1,23 +1,8 @@
-import React, { useEffect } from 'react'
+import React  from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 
 const Login = () => {
-  const toggleDarkMode = () => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    const element = document.body;
-    element.classList.toggle('dark-side');
-    localStorage.setItem('darkMode', !isDarkMode);
-  };
-
-  useEffect(() => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    const element = document.body;
-
-    if (isDarkMode) {
-      element.classList.add('dark-side');
-    }
-  }, []);
 
  const showPassword = () => {
   var x = document.getElementById("Showpassword");
@@ -50,7 +35,7 @@ const Login = () => {
              </h1>
           <div className='Email-User_Field'>
             <div class="input-field">
-              <input type="email" required  name='Userid' /> 
+              <input type="email" required  name='Email' /> 
               <label  className='Enter_Email' >Enter email</label>
             </div>
           </div>
@@ -73,7 +58,7 @@ const Login = () => {
           </div>
 
           <div className='Submit_Button'>
-             <input type='submit' value={'Submit'}/>
+             <input type='submit' value={'Log In'}/>
           </div>
 
           </form>
