@@ -64,6 +64,9 @@ nav.Music_Explore {
   div.Disable_Search-2{
     display: none;
   }
+
+
+
   @media screen and (max-width:1200px) {
     div.Disable_Search-2{
       display: block;
@@ -546,7 +549,7 @@ button.BTN_Upload::after{
     transition: 0.3s all ease-in-out;
   }
   .File_Upload:hover button.BTN_Upload::after {
-    width: 195px;
+    width: 155px;
   }
 
   button.BTN_Upload:hover #Fa-Upload {

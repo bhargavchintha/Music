@@ -30,6 +30,10 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
   };
+
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
   
   return (
     <>
@@ -96,23 +100,22 @@ const Navbar = () => {
                     <i className={`fa ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
                 </label>
                   <input id="menuTrigger" type="checkbox"  class="nav_I" />
-            <div className='Bars_Link_Music' >
+            <div className='Bars_Link_Music' style={{ display: isMenuOpen ? 'block' : 'none' }}>
                     <div className='Button_Dark_Mode'>
-                        <button onClick={toggleDarkMode} id="Pos_Btn" className="BUTNS Button_BTN" title="Change To Dark Mode"></button>
+                        <button onClick={() => {toggleDarkMode(); handleCloseMenu(); }} id="Pos_Btn" className="BUTNS Button_BTN" title="Change To Dark Mode"></button>
                     </div>
                   <div className='Home_Search'>
                     <div className='Down_Home'>
-                    <Link className="Home_name" to="/Home" >
+                    <Link id="Home_Home-Close" className="Home_name" to="/Home" onClick={handleCloseMenu} >
                         <i id="Fa_Home_B" class="fa fa-home" aria-hidden="true"></i> Home</Link>
                     </div>
                     <div className='In_Side_Search'>
-                      <div className='Down_Home'>
-                          <Link  className="Home_name" to="/Search" onClick={handleClick} >
-                          <i id="Fa_Home_B" class="fa fa-search" aria-hidden="true"></i> Search</Link>
+                      <div className='File_Upload'>
+                          <button className='BTN_Upload' onClick={() => { handleClick(); handleCloseMenu(); }}> <i id="Fa-Upload" class="fa fa-search" aria-hidden="true"></i> &nbsp;Search</button>
                       </div>
                     </div>
                     <div className='File_Upload'>
-                      <button className='BTN_Upload' onClick={handleClick} > <i id="Fa-Upload" class="fa fa-upload" aria-hidden="true"></i>  Music Upload </button>
+                      <button className='BTN_Upload' onClick={() => { handleClick(); handleCloseMenu(); }}> <i id="Fa-Upload" class="fa fa-upload" aria-hidden="true"></i>  Music Upload </button>
                     </div>
                     <div className='Search_btn'>
                       <div className='Search_All'>
@@ -120,11 +123,11 @@ const Navbar = () => {
                       </div>
                     </div>
                     <div className='Down_Home'>
-                        <Link  className="Home_name" to="/Signup" >
+                        <Link  className="Home_name" to="/Signup" onClick={handleCloseMenu} >
                         <i id="Fa_Home_B" class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Sign up</Link>
                     </div>
                     <div className='Down_Home'>
-                        <Link  className="Home_name" to="/Login" >
+                        <Link  className="Home_name" to="/Login" onClick={handleCloseMenu} >
                         <i id="Fa_Home_B" class="fa fa-user" aria-hidden="true"></i> Login</Link>
                     </div>
 
