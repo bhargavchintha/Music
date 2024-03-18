@@ -368,12 +368,15 @@ nav.Music_Explore {
       opacity: 1; 
     } 
   }
-  .fa-bars{
+  .fa-bars,
+  .fa-times{
     color: var(--000);
     font-size: 20px !important;
     margin-right: 20px;
     margin-top: 10px;
-  }
+    transition: all 0.3s ease-in-out; 
+}
+
   #menuTrigger:checked ~ .Bars_Link_Music {
     display: block;
   }
@@ -469,6 +472,15 @@ input[type="search"]{
 @media screen and (max-width:640px){
   input[type="search"]{
     margin-right: 30px;
+  }
+}
+div.In_Side_Search{
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width:550px) {
+  div.In_Side_Search{
+    display: block;
   }
 }
 

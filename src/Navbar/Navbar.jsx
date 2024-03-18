@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect ,useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
@@ -25,7 +25,11 @@ const Navbar = () => {
     // Redirect to the login page
     history.push('/Signup');
   };
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(prevState => !prevState);
+  };
 
   return (
     <>
@@ -88,7 +92,9 @@ const Navbar = () => {
               </div>
             </div>
 
-            <label for="menuTrigger" class="nav_ico"><i class="fa fa-bars"></i></label>
+                <label for="menuTrigger" class="nav_ico" onClick={toggleMenu} >
+                    <i className={`fa ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+                </label>
                   <input id="menuTrigger" type="checkbox"  class="nav_I" />
             <div className='Bars_Link_Music'>
               <div className='Button_Dark_Mode'>
@@ -98,6 +104,12 @@ const Navbar = () => {
                 <div className='Down_Home'>
                      <Link  className="Home_name" to="/Home" >
                      <i id="Fa_Home_B" class="fa fa-home" aria-hidden="true"></i> Home</Link>
+                </div>
+                <div className='In_Side_Search'>
+                  <div className='Down_Home'>
+                      <Link  className="Home_name" to="/Search" >
+                      <i id="Fa_Home_B" class="fa fa-search" aria-hidden="true"></i> Search</Link>
+                  </div>
                 </div>
                 <div className='File_Upload'>
                    <button className='BTN_Upload' onClick={handleClick} > <i id="Fa-Upload" class="fa fa-upload" aria-hidden="true"></i>  Music Upload </button>
