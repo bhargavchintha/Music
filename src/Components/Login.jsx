@@ -76,9 +76,6 @@ const Login = () => {
      </div>
 
 
-
-
-    <Link to="/Home">Home</Link>
     </div>
   
     

@@ -14,7 +14,7 @@ body{
 } 
 div.Login_page{
   position: fixed; 
-  z-index: 999999; 
+  z-index: 99999999999999999; 
   padding: 20px; 
   left: 0;
   top: 0;
@@ -419,3 +419,19 @@ p.Link_send{
   text-decoration: underline #002f4b;
 }
 
+div.Error_msg{
+  text-align: center;
+  font-size: 18px;
+}
+p.Msg_error{
+  color: #dc2323;
+}
+h1.Name_Sign_e3{
+  font-size: 40px;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width:550px) {
+  h1.Name_Sign_e3{
+    font-size: 30px;
+  } 
+}

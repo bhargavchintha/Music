@@ -1,13 +1,18 @@
-import React, { Component }  from 'react'
+import React, { useState }  from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
-class Signup extends Component {
 
-  render() {
-    
-    return (
-      <>
-      <title>Sign Up Page</title>
+const Signup = () => {
+
+  const [passwordType, setPasswordType] = useState('password');
+  const showPassword = () => {
+    setPasswordType(prevType => prevType === 'password' ? 'text' : 'password');
+  };
+
+
+  return (
+    <>
+    <title>Sign Up Page</title>
     <div className='Login_page'>
        
        <div className='Dark_Btn_Logo'>
@@ -46,13 +51,13 @@ class Signup extends Component {
           <div className='Cn_Passwords'>
             <div className='Password_Field'>
               <div class="input-field">
-                <input  id="Showpassword" type='password' required  name='Password' /> 
+                <input  id="Showpassword" type={passwordType} required  name='Password' /> 
                 <label  className='Enter_Email' >Password</label>
               </div>
             </div>
             <div className='Confirm_Password_Field'>
               <div class="input-field">
-                <input  id="Showpassword" type='password' required  name='confirmpassword' /> 
+                <input  id="Showpassword" type={passwordType} required  name='confirmpassword' /> 
                 <label  className='Enter_Email' >confirm Password</label>
               </div>
             </div>
@@ -63,14 +68,14 @@ class Signup extends Component {
           <div className='Password-Show'>
 
             <div className='Show_password'>
-              <input type="checkbox" id="showPassword"  /><label htmlFor="showPassword" className="Show_pass">Show Password</label>
+              <input type="checkbox" id="showPassword" onClick={showPassword} /><label htmlFor="showPassword" className="Show_pass">Show Password</label>
             </div>
 
 
           </div>
 
           <div className='Submit_Button'>
-             <input  type='submit' value={'Submit'}/>
+             <input onClick={Signup} type='submit' value={'Submit'}/>
           </div>
 
           </form>
@@ -92,8 +97,7 @@ class Signup extends Component {
   
     
     </>
-    )
-  }
+  )
 }
 
 export default Signup
