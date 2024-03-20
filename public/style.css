@@ -24,7 +24,7 @@ body{
    --box:rgb(0 0 0 / 0.2);
    --bule:#ccc;
    --373433:#373433;
-   --sun:url('./Svg/Sun\ copy.svg');
+   --sun:url('./Svg/Sun.svg');
    
 }
 body{
@@ -439,7 +439,8 @@ div.Home_Search{
   }
 }
   
-#Search_Box-text{
+#Search_Box-text,
+#Search_Box-texts{
   width: 20px;
   transition: width 0.4s ease-in-out;
   padding: 10px 15px;
@@ -455,28 +456,33 @@ div.Home_Search{
   color: var(--000);
 }
 @media screen and (max-width:1250px) {
-  #Search_Box-text{
+  #Search_Box-text,
+  #Search_Box-texts{
     margin-left: 50px;
   }
 }
 @media screen and (max-width:1200px) {
-  #Search_Box-text{
+  #Search_Box-text,
+  #Search_Box-texts{
     margin-left: -145px;
     margin-right: 20px;
   }
 }
 @media screen and (max-width:1050px){
-  #Search_Box-text{
+  #Search_Box-text,
+  #Search_Box-texts{
     margin-right: 10px;
   }
 }
 @media screen and (max-width:940px){
-  #Search_Box-text{
+  #Search_Box-text,
+  #Search_Box-texts{
     margin-right: 30px;
   }
 }
 @media screen and (max-width:640px){
-  #Search_Box-text{
+  #Search_Box-text,
+  #Search_Box-texts{
     margin-right: 30px;
   }
 }
@@ -509,7 +515,8 @@ div.In_Side_Search{
     margin-left: -140px;
   }
 }
-#Search_Box-text:focus {
+#Search_Box-text:focus,
+#Search_Box-texts:focus {
   width: 300px;
   border-radius: 10px;
   padding-left: 35px;
@@ -517,7 +524,8 @@ div.In_Side_Search{
   box-shadow: 0 0 5pt 2pt var(--000);
 }
 @media screen and (max-width:600px){
-  #Search_Box-text:focus{
+  #Search_Box-text:focus,
+  #Search_Box-texts:focus{
     width: 250px;
   }
 }

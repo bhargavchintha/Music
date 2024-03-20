@@ -103,7 +103,7 @@ const Navbar = () => {
               <div className='Music_Search'>
                   <form action="" class="search-bar" onSubmit={handleSearch} >
                       <i id="Searchbar" class="fa fa-search" aria-hidden="true"></i>
-                      <input id="Search_Box-text" type="search" name="search" pattern=".*\S.*" required  autoComplete="off"   value={searchQuery} onChange={handleInputChange} />
+                      <input id="Search_Box-texts" type="search" name="search" pattern=".*\S.*" required  autoComplete="off"   value={searchQuery} onChange={handleInputChange} />
                   </form>
               </div>
             </div>
@@ -122,16 +122,17 @@ const Navbar = () => {
                         <i id="Fa_Home_B" class="fa fa-home" aria-hidden="true"></i> Home</Link>
                     </div>
                     <div className='In_Side_Search'>
-                      <div className='File_Upload'>
-                          <button className='BTN_Upload' onClick={handleCloseMenu}> <i id="Fa-Upload" class="fa fa-search" aria-hidden="true"></i> &nbsp;Search</button>
-                      </div>
+                    <div className='Down_Home'>
+                    <Link id="Home_Home-Close" className="Home_name" to="/Search" onClick={handleCloseMenu} >
+                        <i id="Fa_Home_B" class="fa fa-search" aria-hidden="true"></i> Search</Link>
+                    </div>
                     </div>
                     <div className='File_Upload'>
                       <button className='BTN_Upload' onClick={() => { handleClick(); handleCloseMenu(); }}> <i id="Fa-Upload" class="fa fa-upload" aria-hidden="true"></i>  Music Upload </button>
                     </div>
                     <div className='Search_btn'>
                       <div className='Search_All'>
-                          <Link to='/About' className='Btn_Search'> <i id="Info_Cricle" class="fa fa-info-circle" aria-hidden="true"></i> About</Link>
+                          <Link to='/About' onClick={handleCloseMenu} className='Btn_Search'> <i id="Info_Cricle" class="fa fa-info-circle" aria-hidden="true"></i> About</Link>
                       </div>
                     </div>
                     <div className='Down_Home'>
